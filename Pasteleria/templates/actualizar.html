@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+{{ dato.color}}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <p><label for="id_Pizza">Sabor:</label> <input type="text" name="Sabor" maxlength="20" id="id_Sabor" value="{{dato.Sabor}}"></p>
+    <p><label for="Medida">Medida:</label> 
+        <select name="Medida" id="id_Medida">
+            {% if dato.Medida == 'Chico' %}
+                <option value="Chico" selected>Chico</option>
+            {% else %}
+                <option value="Chico">Chico</option>
+            {% endif %}
+
+            {% if dato.Medida == 'Mediano' %}
+                <option value="Mediano" selected>Mediano</option>
+            {% else %}
+                <option value="Mediano">Mediano</option>
+            {% endif %}
+
+            {% if dato.Medida == 'Grande' %}
+                <option value="Grande" selected>Grande</option>
+            {% else %}
+                <option value="Grande">Grande</option>
+            {% endif %}
+
+        </select>
+    </p>
+
+    <p><label for="Cantidad">Cantidad:</label> <input type="number" name="Cantidad" required="" id="id_Cantidad" value="{{dato.Cantidad}}"></p>
+    <p><label for="Costo">Costo:</label> <input type="number" name="Costo" maxlength="20" id="id_Costo" value="{{dato.Costo}}"></p>
+       
+
+        <button type="submit" class="btn btn-primary">Actualizar</button>
+
+</form>
+{% endblock content %}
