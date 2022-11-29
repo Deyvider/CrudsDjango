@@ -12,8 +12,8 @@ from .views import *
 
 
 urlpatterns = [
-    path('listarP/',listar,name="listarP"),
-    path('crearP/', pizzacrear, name='crearP'),
-    path('eliminarP/<int:id>',eliminar,name='eliminarP'),
-    path('actualizarP/<int:id>',actualizar,name='actualizarP'),
+    path('Pizza/',listar,name="listarPi"),
+    path('crearPi/', pizzacrear, name='crearPi'),
+    path('eliminarPi/<int:id>',eliminar,name='eliminarPi'),
+    path('actualizarPi/<int:id>',actualizar,name='actualizarPi'),
 ]

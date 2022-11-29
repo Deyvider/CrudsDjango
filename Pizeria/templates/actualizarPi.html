@@ -1,9 +1,9 @@
-{% extends "base.html" %}
+{% extends "basePi.html" %}
 {% block content %}
 {{ dato.color}}
 <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
-    <p><label for="id_Pastel">Sabor:</label> <input type="text" name="Sabor" maxlength="20" id="id_Sabor" value="{{dato.Sabor}}"></p>
+    <p><label for="id_Pizza">Nombre:</label> <input type="text" name="Nombre" maxlength="20" id="id_Nombre" value="{{dato.Nombre}}"></p>
     <p><label for="Medida">Medida:</label> 
         <select name="Medida" id="id_Medida">
             {% if dato.Medida == 'Chico' %}

@@ -13,7 +13,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 # Create your views here.
 def listar(request):
     pizza= Pizza.objects.all()
-    template="listarP.html"
+    template="listarPi.html"
     context={
         'Pizza': pizza,
 
@@ -25,18 +25,18 @@ def pizzacrear(request):
         form= agregar(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('listarP')  
+            return redirect('listarPi')  
 
     form = agregar 
     context={
         'form':form,
 
     }
-    return render (request, "agregarP.html", context)
+    return render (request, "agregarPi.html", context)
 def eliminar(request, id):
   member = Pizza.objects.get(id=id)
   member.delete()
-  return redirect(reverse('listarP'))
+  return redirect(reverse('listarPi'))
 
 def actualizar(request, id):
     if request.method=='POST':
@@ -44,12 +44,12 @@ def actualizar(request, id):
         form=agregar(request.POST or None, instance=instance)
         if form.is_valid():
             form.save()
-            return redirect('listarP')
+            return redirect('listarPi')
     
     dato = Pizza.objects.get(id=id)
     #form= agregar()
     #form=mymember
-    template = 'actualizarP.html'
+    template = 'actualizarPi.html'
     context = {
     'dato': dato,
     #'form':form,
