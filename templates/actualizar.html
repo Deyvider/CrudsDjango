@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 {{ dato.color}}
-<form method="post" enctype="multipart/form-data">
+<form class="form" method="post" enctype="multipart/form-data">
     {% csrf_token %}
     <p><label for="id_Pastel">Sabor:</label> <input type="text" name="Sabor" maxlength="20" id="id_Sabor" value="{{dato.Sabor}}"></p>
     <p><label for="Medida">Medida:</label> 
@@ -28,7 +28,7 @@
     </p>
 
     <p><label for="Cantidad">Cantidad:</label> <input type="number" name="Cantidad" required="" id="id_Cantidad" value="{{dato.Cantidad}}"></p>
-    <p><label for="Costo">Costo:</label> <input type="number" name="Costo" maxlength="20" id="id_Costo" value="{{dato.Costo}}"></p>
+    <p><label for="Costo">Costo:</label> <input type="number" name="Costo"  id="id_Costo" value="{{dato.Costo}}" min=" 0.1" step="0.01"></p>
        
 
         <button type="submit" class="btn btn-primary">Actualizar</button>

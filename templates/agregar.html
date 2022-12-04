@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form class="" method="post" enctype="multipart/form-data">
+    
+    {% csrf_token %}
+    <p><label class="form_label" for="id_pastel">Sabor:</label> 
+        <input class="form_input" type="text" name="Sabor" maxlength="20" id="id_Sabor" ></p>
+    <p><label class="form_label" for="Medida">Medida:</label> 
+     <select class="form_select" name="Medida" id="id_Medida">
+            <option value>-----------</option>
+            <option value="Chico">Chico</option>
+            <option value="Mediano">  Mediano</option>
+             <option value="Grande">Grande</option>
+        </select>
+    </p>
+    <p><label class="form_label" for="Cantidad">Cantidad:</label> 
+        <input class="form_input"
+        type="number" name="Cantidad" required="" id="id_Cantidad" value="{{dato.Cantidad}}"></p>
+    <p><label class="form_label" for="Costo">Costo:</label> 
+        <input class="form_input" type="number" name="Costo" id="id_Costo" min=" 0.1" step="0.01"></p>
+    <button type="submit" class="btn btn-primary">Aceptar</button>
+
+</form>
+    
+{% endblock content %}

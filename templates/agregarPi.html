@@ -1,8 +1,8 @@
-{% extends "base.html" %}
+{% extends "basePi.html" %}
 {% block content %}
 <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
-    <p><label for="id_Pizza">Sabor:</label> <input type="text" name="Sabor" maxlength="20" id="id_Sabor" ></p>
+    <p><label for="id_Pizza">Nombre:</label> <input type="Nombre" name="Nombre" maxlength="20" id="id_Nombre" ></p>
     <p><label for="Medida">Medida:</label> 
         <select name="Medida" id="id_Medida">
             <option value>-----------</option>
@@ -13,7 +13,7 @@
     </p>
 
     <p><label for="Cantidad">Cantidad:</label> <input type="number" name="Cantidad" required="" id="id_Cantidad" value="{{dato.Cantidad}}"></p>
-    <p><label for="Costo">Costo:</label> <input type="number" name="Costo" maxlength="20" id="id_Costo" ></p>
+    <p><label for="Costo">Costo:</label> <input type="number" name="Costo" id="id_Costo" ></p>
             
 
         <button type="submit" class="btn btn-primary">Aceptar</button>
