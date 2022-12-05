@@ -2,26 +2,130 @@
     padding:0 ;
     margin:0 ;
     box-sizing: border-box;
-    font-family: 'Monserrat', sans-serif;
+    font-family: sans-serif;
 }
 
 html{
-    font-size: 62.5%;
+    font-size: 100%;
 }
 
-body{
-    font: size 1.9rem;
-    background: url(pastel.jpg);
-    background-attachment: fixed;
+
+.bc{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(Home.jpg);
     background-size: cover;
+    background-position: center;
 }
 
-.form{
-    color: red;
-    background-color: purple;
-    width: 50%;
-    min-width: 300px;
-    margin: auto;
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+.content h1{
+    font-size: 70px;
+    margin-top: 90px;
+}
+
+.content p{
+    margin: 0.5px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+a{
+    width: 200px;
+    margin: 30px 10px;
+}
+
+.form_input{
+  width: 100%;
+  height: 45%;
+  background: rgb(255, 255, 255);
+  padding: 10px;
+  
+}
+
+.prueba{
+    width: 100%;
+    position: absolute;
+    top: 10%;
+    transform: translateX(6%);
+    text-align: center;
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
+.imagenbg{
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('https://gastronomicainternacional.com/wp-content/uploads/2020/05/tecnicas-de-reposteria-2-1024x576.jpg');
+    background-size: cover;
+    background-position: center;   
+    width: 100%;
+    height: 100vh;
+}
+.imagenbg2{
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('https://images.pexels.com/photos/10342001/pexels-photo-10342001.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;   
+    width: 100%;
+    height: 100vh;
+}
+
+.agrega{
+    width: 70%;
+    background: rgba(0,0,0,0.491);
+    margin:auto;
     margin-top: 50px;
     padding: 20px;
+    display:flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20%;
+    transform: translateY(-15%);
+    transform: translateX(20%);
+    color: #fff; 
+}
+
+.entrada{
+    border: none;
+    border-bottom: 2px solid snow;
+    background: none;
+    color:#fff
+}
+
+.fondopi{
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('https://images.pexels.com/photos/905847/pexels-photo-905847.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;   
+    width: 100%;
+    height: 100vh;
+}
+
+.imagenbg2pi{
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('https://images.pexels.com/photos/825661/pexels-photo-825661.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;   
+    width: 100%;
+    height: 100vh;
+}
+
+.titulo{
+    text-align: center;
+    color:#fff
+}
+
+
+
+.colortext{
+    color: black;
+}
+
+.logo{
+    width: 200px;
+    
 }

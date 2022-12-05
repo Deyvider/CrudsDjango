@@ -1,29 +1,48 @@
 {% extends "basePi.html" %}
 {% block content %}
 
-<button onclick="location.href='/crearPi'">agregar</button>
+<div class="bg-image fondopi">
+          <div class="container prueba">
+            <img src="../static/2.png">
+            <br>
+            <br>
+            <div class="titulo">
+              <h3>
+                <strong>TUS PEDIDOS
+              </h3>
+           </div>
+            <div class="row justify-content-center">
+              <div class="col-12">
+                <div class="card bg-dark shadow-2-strong">
+                  <div class="card-body">
+                    <div class="table-responsive">
+                        <table  class="table table-dark">
+                              <tr>
+                                 <th>Nombre</th>
+                                 <th>Medida</th>
+                                 <th>Cantidad</th>
+                                 <th>Costo</th>
 
-    <table>
-
-        <tr>
-
-        <th>Nombre</th>
-        <th>Medida</th>
-        <th>Cantidad</th>
-        <th>Costo</th>
-
-        </tr>
-        {% for n in Pizza %}        
-            <tr>
-            <td>{{n.Nombre}}</td>
-            <td>{{n.Medida}}</td>
-            <td>{{n.Cantidad}}</td>
-            <td>{{n.Costo}}</td>
-            <td><button id="{{n.id}}" onclick="location.href='/actualizarPi/{{n.id}}'">actualizar</button></td>
-            <td><button id="{{n.id}}" onclick="location.href='/eliminarPi/{{n.id}}'">eliminar</button></td>
-            </tr>
+                                 </tr>
+                                    {% for n in Pizza %}        
+                                  <tr>
+                                     <td>{{n.Nombre}}</td>
+                                     <td>{{n.Medida}}</td>
+                                     <td>{{n.Cantidad}}</td>
+                                     <td>{{n.Costo}}</td>
+                                     <td><button id="{{n.id}}" onclick="location.href='/actualizarPi/{{n.id}}'"class="btn btn-success">Actualizar</button></td>
+                                     <td><button id="{{n.id}}" onclick="location.href='/eliminarPi/{{n.id}}'"class="btn btn-danger">Eliminar</button></td>
+                                      </tr>
         
-            {% endfor %}
-        </table>
+                                     {% endfor %}
+                         </table>
+                         <div class="d-grid gap-2 col-6 mx-auto"> 
+                            <button onclick="location.href='/crearPi'"class="btn btn-light btn-rounded">Agregar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
 
 {% endblock content %}

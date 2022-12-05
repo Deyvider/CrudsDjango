@@ -1,26 +1,36 @@
 {% extends "base.html" %}
 {% block content %}
 
-<form class="" method="post" enctype="multipart/form-data">
-    
-    {% csrf_token %}
-    <p><label class="form_label" for="id_pastel">Sabor:</label> 
-        <input class="form_input" type="text" name="Sabor" maxlength="20" id="id_Sabor" ></p>
-    <p><label class="form_label" for="Medida">Medida:</label> 
-     <select class="form_select" name="Medida" id="id_Medida">
-            <option value>-----------</option>
-            <option value="Chico">Chico</option>
-            <option value="Mediano">  Mediano</option>
-             <option value="Grande">Grande</option>
-        </select>
-    </p>
-    <p><label class="form_label" for="Cantidad">Cantidad:</label> 
-        <input class="form_input"
-        type="number" name="Cantidad" required="" id="id_Cantidad" value="{{dato.Cantidad}}"></p>
-    <p><label class="form_label" for="Costo">Costo:</label> 
-        <input class="form_input" type="number" name="Costo" id="id_Costo" min=" 0.1" step="0.01"></p>
-    <button type="submit" class="btn btn-primary">Aceptar</button>
 
+<form class="" method="post" enctype="multipart/form-data">
+    <div class="bg-image imagenbg2">
+      <img class="logo" src="../static/1.png">
+        <div class="container agrega">
+         <div class="titulo">
+            <h3>
+               Agregar Pedido
+            </h3>
+         </div>
+         {% csrf_token %}
+         <p><label class="form_label" for="id_pastel">Sabor:</label> 
+            <input class="form_input entrada" type="text" name="Sabor" maxlength="20" id="id_Sabor" ></p>
+         <p><label class="form_label" for="Medida">Medida:</label> 
+            <select class="form_input entrada" name="Medida" id="id_Medida">
+               <option  value>Selecciona</option>
+               <option class="colortext"value="Chico">Chico</option>
+               <option class="colortext" value="Mediano">  Mediano</option>
+               <option class="colortext" value="Grande">Grande</option>
+           </select>
+         </p>
+         <p><label class="form_label" for="Cantidad">Cantidad:</label> 
+            <input class="form_input entrada"
+            type="number" name="Cantidad" required="" id="id_Cantidad" value="{{dato.Cantidad}}"></p>
+        
+            <p><label class="form_label" for="Costo">Costo:</label> 
+            <input class="form_input entrada" type="number" name="Costo" id="id_Costo" min=" 0.1" step="0.01"></p>
+            <button type="submit" class="btn btn-primary">Aceptar</button>
+         </div>     
+    </div>
 </form>
-    
 {% endblock content %}
+

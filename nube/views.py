@@ -7,7 +7,7 @@ from django.contrib.auth import authenticate,login,logout
 from prueba.models import *
 
 def entrada(request):
-    template="base.html"
+    template="Home.html"
     return render(request, template)
 
 def hijo(request):
