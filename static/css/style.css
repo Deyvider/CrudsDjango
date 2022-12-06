@@ -57,7 +57,7 @@ a{
     top: 10%;
     transform: translateX(6%);
     text-align: center;
-    max-height: 400px;
+    max-height: 80%;
     overflow-y: scroll;
 }
 
